@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-aayushiworkflow-staging-125226-authRole",
+      "UnauthRoleArn": "arn:aws:iam::437749481831:role/amplify-aayushiworkflow-staging-125226-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::437749481831:role/amplify-aayushiworkflow-staging-125226-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-aayushiworkflow-staging-125226-deployment",
+      "UnauthRoleName": "amplify-aayushiworkflow-staging-125226-unauthRole",
+      "StackName": "amplify-aayushiworkflow-staging-125226",
+      "StackId": "arn:aws:cloudformation:us-east-1:437749481831:stack/amplify-aayushiworkflow-staging-125226/2fab5610-e405-11ec-8c5b-0a5b501f2af7",
+      "AmplifyAppId": "d1zu9ruc9xk0dt"
+    },
+    "categories": {
+      "auth": {
+        "aayushiworkflowe8132718": {}
+      }
+    }
+  }
+}

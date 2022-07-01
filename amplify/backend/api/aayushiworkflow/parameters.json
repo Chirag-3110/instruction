@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "aayushiworkflow",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authaayushiworkflowe8132718",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

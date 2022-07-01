@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "aayushiworkflow",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "F:\\storage\\AWS-storage\\amplify\\backend\\api\\aayushiworkflow\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authaayushiworkflowe8132718"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2023-06-27T18:17:14.779Z",
+        "keyDescription": "workflowapi"
+      }
+    ]
+  }
+}

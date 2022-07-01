@@ -1,0 +1,69 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type Todo @model {
+  id: ID!
+  name: String!
+  description: String
+}
+
+type User @model @auth(rules:[
+      { allow: private, operations: [read]},
+      { allow: owner }
+]) {
+  email: String! @primaryKey
+  name: String!
+  isAdmin: Boolean!
+}
+
+type Order @model @auth(rules:[
+      { allow: private, operations: [read,update]},
+      { allow: owner }
+]){
+  orderID: String! @primaryKey
+  description: String!
+}
+type OrderTask @model @auth(rules:[
+      { allow: private, operations: [read,update]},
+      { allow: owner }
+]){
+  TaskID: String! @primaryKey
+  NodeID: String!
+  NextNodeName: [String!]!
+  TaskAssignedTo: String!
+}
+
+type Workflow @model @auth(rules:[
+      { allow: private, operations: [read]},
+      { allow: owner }
+]){
+  workflowName: String! @primaryKey
+  WorkFlowDescription:String!
+  SaveAsDraft:Boolean!
+}
+
+type WorkflowDefinition @model @auth(rules:[
+      { allow: private, operations: [read]},
+      { allow: owner }
+]){
+  workflowdefinitionid:String!
+  NodeName: String!  @index(name: "byNodeName", sortKeyFields: ["WorkFlowName"], queryField: "nodeByNodeandWorkFlowName")
+  NextNodeName: [String!]!
+  Description: String!
+  isRootNode:Boolean!
+  WorkFlowName:String!
+}
+type UserNotifications @model @auth(rules:[
+      { allow: private, operations: [read,update]},
+      { allow: owner }
+]){
+  NotificationStatus:NotifStatusEnum! @index(name: "byNotifStatus", queryField: "userByNotifStatus")
+  NotificationContent:String!
+  NotifyTime:String!
+}
+
+enum NotifStatusEnum{
+  SEEN
+  UNSEEN
+}

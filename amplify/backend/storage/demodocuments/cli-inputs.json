@@ -1,0 +1,14 @@
+{
+  "resourceName": "demodocuments",
+  "policyUUID": "336301db",
+  "bucketName": "demostorage",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
